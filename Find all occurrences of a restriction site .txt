@@ -1,0 +1,16 @@
+#Find all occurrences of a restriction site
+from string import *
+def restrict(dna, enz):
+"print all start positions of a restriction site"
+site = find (dna, enz)
+while site != -1:
+print "restriction site %s at position %d" % (enz, site)
+site = find (dna, enz, site + 1)
+
+
+
+
+>>> restrict(dna, EcoRI)
+restriction site gaattc at position 188
+restriction site gaattc at position 886
+restriction site gaattc at position 1326
